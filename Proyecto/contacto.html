@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto – Información Miscelánea</title>
+  <meta name="description" content="Envía rumores, teorías conspirativas o información para verificar su origen o contexto." />
+  <meta name="keywords" content="contacto, envío de datos, rumores, teorías, conspiraciones, origen, verificar" />
+  <link rel="stylesheet" href="css/contacto.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="logo" tabindex="0">Información Miscelánea</div>
+
+      <ul class="navlinks" id="navlinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+
+      <button class="nav-cel" id="nav-cel" aria-label="Abrir menú" aria-expanded="false" aria-controls="navlinks" type="button">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="formulario-contacto" aria-labelledby="formulario-title">
+      <h1 id="formulario-title">Envíanos tu aporte</h1>
+      <p id="form-descripcion">
+        ¿Conoces un rumor, teoría conspirativa o información de dudosa procedencia? Compártela con nosotros para su análisis.
+      </p>
+
+      <form id="form-contacto" action="#" method="post" novalidate aria-describedby="form-descripcion">
+        
+        <div class="form-grupo">
+          <label for="nombre">Tu nombre <span class="opcional">(opcional)</span></label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ejemplo: Juan Pérez" autocomplete="name" />
+        </div>
+
+        <div class="form-grupo">
+          <label for="email">Correo electrónico <span class="opcional">(opcional)</span></label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" autocomplete="email" />
+        </div>
+
+        <div class="form-grupo">
+          <label for="telefono">Teléfono <span class="opcional">(opcional)</span></label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo: +34 612 345 678" autocomplete="tel" />
+        </div>
+
+        <div class="form-grupo">
+          <label for="categoria">Categoría de la información <span class="requerido">*</span></label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecciona una opción</option>
+            <option value="rumor">Rumor</option>
+            <option value="teoria">Teoría conspirativa</option>
+            <option value="noticia">Noticia dudosa</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="form-grupo">
+          <label for="contenido">Rumor, teoría o información <span class="requerido">*</span></label>
+          <textarea id="contenido" name="contenido" required placeholder="Describe la información que deseas compartir..." rows="5"></textarea>
+        </div>
+
+        <div class="form-grupo">
+          <label for="origen">¿Conoces su posible origen?</label>
+          <input type="text" id="origen" name="origen" placeholder="Ejemplo: redes sociales, WhatsApp, etc." autocomplete="off" />
+        </div>
+
+        <div class="form-grupo checkbox">
+          <input type="checkbox" id="consentimiento" name="consentimiento" required />
+          <label for="consentimiento">Acepto que mi aporte sea analizado y almacenado para fines de investigación.</label>
+        </div>
+
+        <div class="form-privacidad">
+          <small>La información enviada será tratada de forma confidencial y no será compartida sin consentimiento previo.</small>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar</button>
+        <p id="mensaje-confirmacion" class="oculto" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Proyecto Estudiantil. Dominio Público.</p>
+  </footer>
+
+  <script src="js/contacto.js"></script>
+</body>
+</html>

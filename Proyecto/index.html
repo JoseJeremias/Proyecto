@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Información Miscelánea – Verifica, Comprende, Contextualiza</title>
+  <meta name="description" content="Verifica si una información es verdadera o falsa y descubre su origen político, económico, científico, religioso o filosófico." />
+  <meta name="keywords" content="verificación, fake news, ideología, política, religión, ciencia, filosofía, contexto, análisis" />
+  <meta name="author" content="Equipo de Información Miscelánea" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Información Miscelánea">
+  <meta property="og:description" content="Verifica datos, comprende contextos y combate la desinformación.">
+  <meta property="og:image" content="img/Banner.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tuweb.com">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/inicio.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-light" role="navigation" aria-label="Navegación principal">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="navbar-brand" tabindex="0">Información Miscelánea</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navlinks" aria-controls="navlinks" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navlinks">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-4">
+    <!-- Carrusel -->
+    <section class="carousel" aria-label="Carrusel de imágenes informativas">
+      <div class="carousel-container position-relative">
+        <div class="carousel-slide"><img src="img/Banner3.png" alt="Presentación Jhoseph Jeremi Vento Salvatierra" loading="lazy" class="img-fluid rounded" /></div>
+        <div class="carousel-slide"><img src="img/Banner2.png" alt="Fact-checkers de renombre" loading="lazy" class="img-fluid rounded" /></div>
+        <div class="carousel-slide"><img src="img/Banner.png" alt="Servicios ofrecidos" loading="lazy" class="img-fluid rounded" /></div>
+        <button class="carousel-btn prev position-absolute start-0 top-50 translate-middle-y" aria-label="Imagen anterior">&#10094;</button>
+        <button class="carousel-btn next position-absolute end-0 top-50 translate-middle-y" aria-label="Imagen siguiente">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="intro text-center mt-5" aria-labelledby="intro-title">
+      <h1 id="intro-title">Bienvenido a Información Miscelánea</h1>
+      <p>Explora verdades, desmiente mentiras y comprende el contexto detrás de cada dato.</p>
+    </section>
+
+    <!-- Verificación -->
+    <section class="verificacion my-5" aria-labelledby="verificacion-title">
+      <h2 id="verificacion-title">¿Es verdadero o falso?</h2>
+      <p id="verificacion-description">Consulta o sube una afirmación para analizar su veracidad y origen.</p>
+      <form id="form-verificacion" action="#" method="get" role="search" aria-describedby="verificacion-description" class="d-flex flex-column flex-md-row gap-3">
+        <div class="form-floating flex-fill">
+          <input type="text" class="form-control" id="consulta" name="consulta" placeholder="Escribe la afirmación aquí..." required aria-required="true" />
+          <label for="consulta">Introduce una afirmación para verificar</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Verificar</button>
+      </form>
+    </section>
+
+    <!-- Contexto -->
+    <section class="contexto mb-5" aria-labelledby="contexto-title">
+      <h2 id="contexto-title">¿De dónde proviene esta idea?</h2>
+      <p>Explora el trasfondo ideológico, político, científico o religioso de una afirmación.</p>
+      <nav aria-label="Filtros de contexto">
+        <ul class="filtros-contexto list-unstyled d-flex flex-wrap gap-2 mt-3">
+          <li><button type="button" class="btn btn-outline-secondary" aria-pressed="false">Ideológico</button></li>
+          <li><button type="button" class="btn btn-outline-secondary" aria-pressed="false">Político</button></li>
+          <li><button type="button" class="btn btn-outline-secondary" aria-pressed="false">Científico</button></li>
+          <li><button type="button" class="btn btn-outline-secondary" aria-pressed="false">Religioso</button></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios my-5" aria-labelledby="testimonios-title">
+      <h2 id="testimonios-title">Lo que dicen nuestros usuarios</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>"Gracias a esta web pude confirmar que una noticia viral era falsa. ¡Muy útil!"</p>
+            <footer class="blockquote-footer">Carla Méndez, profesora</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>"Excelente para entender el trasfondo de afirmaciones políticas."</p>
+            <footer class="blockquote-footer">Luis Ramírez, periodista</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq mb-5" aria-labelledby="faq-title">
+      <h2 id="faq-title">Preguntas Frecuentes</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="faq1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta1">
+              ¿Cómo verifican las afirmaciones?
+            </button>
+          </h3>
+          <div id="respuesta1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Utilizamos fuentes confiables y contrastamos con bases de datos académicas, científicas y periodísticas.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="faq2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta2">
+              ¿Quién está detrás del proyecto?
+            </button>
+          </h3>
+          <div id="respuesta2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Un equipo multidisciplinario de estudiantes e investigadores con vocación de servicio público.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boletín -->
+    <section class="boletin mb-5" aria-labelledby="boletin-title">
+      <h2 id="boletin-title">Suscríbete al boletín</h2>
+      <form action="#" method="post" class="d-flex flex-column flex-md-row gap-3">
+        <input type="email" class="form-control" name="correo" placeholder="Tu correo electrónico" required aria-required="true">
+        <button type="submit" class="btn btn-success">Suscribirme</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="text-center py-4 bg-light mt-auto">
+    <div class="container">
+      <p class="mb-0">Información Miscelánea es un proyecto estudiantil sin fines de lucro.</p>
+    <p class="mb-0">&copy; 2025 Proyecto Estudiantil. Dominio Público.</p>
+  </div>
+</footer>
+
+  <!-- Botón flotante de ayuda -->
+  <button class="btn btn-info position-fixed bottom-0 end-0 m-4" aria-label="Ayuda rápida">¿Necesitas ayuda?</button>
+
+  <!-- Scripts -->
+  <script src="js/inicio.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

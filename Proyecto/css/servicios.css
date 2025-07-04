@@ -1,0 +1,300 @@
+:root {
+    --color-bg-main: #333;
+    --color-text-main: #fff;
+    --color-highlight: #f39c12;
+    --color-bg-section: #f4f4f4;
+    --color-text-section: #222;
+
+    --font-family-base: Arial, Helvetica, sans-serif;
+    --font-size-base: 16px;
+    --font-size-small: 13px;
+
+    --border-radius-base: 10px;
+    --box-shadow-base: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-base);
+}
+
+body {
+    font-size: var(--font-size-base);
+    background-color: var(--color-bg-section);
+    color: var(--color-text-section);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-bg-main);
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: var(--color-text-main);
+    font-size: 1.25rem;
+    font-weight: 700;
+    user-select: none;
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navlinks li a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    transition: color 0.3s ease;
+    outline-offset: 2px;
+}
+
+.navlinks li a:hover,
+.navlinks li a:focus-visible {
+    color: var(--color-highlight);
+    outline: none;
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.nav-cel {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+    z-index: 20;
+    user-select: none;
+}
+
+.nav-cel:focus-visible {
+    outline: 2px solid var(--color-highlight);
+    outline-offset: 2px;
+}
+
+.nav-cel span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--color-text-main);
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.servicios-intro h1 {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.servicios-intro p {
+    max-width: 700px;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* ===== CARDS DE SERVICIOS ===== */
+.servicios-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.servicio {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    border-radius: var(--border-radius-base);
+    padding: 20px;
+    box-shadow: var(--box-shadow-base);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    .servicio:hover,
+    .servicio:focus-visible {
+        transform: translateY(-6px);
+        box-shadow: var(--box-shadow-hover);
+    }
+}
+
+/* ===== TESTIMONIOS ===== */
+.testimonios {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-base);
+    margin-bottom: 60px;
+}
+
+.testimonios h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #111;
+}
+
+.testimonios blockquote {
+    border-left: 5px solid var(--color-highlight);
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #444;
+}
+
+.testimonios footer {
+    font-size: var(--font-size-small);
+    color: #666;
+    margin-top: 5px;
+}
+
+/* ===== FAQ ===== */
+.faq {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-base);
+    margin-bottom: 60px;
+}
+
+.faq h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #111;
+}
+
+.faq details {
+    margin-bottom: 15px;
+    background-color: #fafafa;
+    border-radius: var(--border-radius-base);
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.faq summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color-bg-main);
+}
+
+.faq p {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* ===== CTA ===== */
+.cta {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    padding: 40px 20px;
+    border-radius: var(--border-radius-base);
+    text-align: center;
+    box-shadow: var(--box-shadow-base);
+    margin-bottom: 40px;
+}
+
+.cta h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.boton-cta {
+    display: inline-block;
+    background-color: var(--color-highlight);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-cta:hover,
+.boton-cta:focus-visible {
+    background-color: #d98000;
+    outline: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.875rem;
+}
+
+/* ===== RESPONSIVE: NAVBAR ===== */
+@media (max-width: 760px) {
+    .navlinks {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var(--color-bg-main);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        z-index: 15;
+    }
+
+    .navlinks.active {
+        display: flex;
+        max-height: 300px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navlinks li {
+        margin: 10px 0;
+    }
+
+    .nav-cel {
+        display: flex;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+}
